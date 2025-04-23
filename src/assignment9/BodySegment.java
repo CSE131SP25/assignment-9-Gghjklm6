@@ -11,15 +11,28 @@ public class BodySegment {
 	
 	public BodySegment(double x, double y, double size) {
 		//FIXME
+		this.x = x;
+		this.y = y;
+		this.size = size;
 		
 		//See ColorUtils for some color options (or choose your own)
+		this.color = StdDraw.GREEN;
 	}
 	
 	/**
 	 * Draws the segment
 	 */
 	public void draw() {
-		//FIXME
+		StdDraw.setPenColor(this.color);
+		StdDraw.filledCircle(this.x, this.y, this.size);
+	}
+	
+	public double getX() {
+		return x;
+	}
+	
+	public double getY() {
+		return y;
 	}
 	
 }
